@@ -1,20 +1,38 @@
-import React from 'react'
-import State from './assets/state'
-import StateString from './assets/statestring'
+import React, { useState } from "react";
+import bulbOn from "./assets/download (1).jpg";
+import bulbOff from "./assets/download.jpg";
+import ColorButton from "./buttoncolor";
 import './App.css'
+import Fibanocci from "./fibonaccii";
 
-const App = () => {
+const Bulb = () => {
+  const [bulb, setBulb] = useState(bulbOff);
+
+  const turnOn = () => setBulb(bulbOn);
+  const turnOff = () => setBulb(bulbOff);
+
   return (
     <>
-      <div className="card-container">
-        <State />
-      </div>
+    <div className="app">
+      <div style={{ textAlign: "center" }}>
+      <img src={bulb} alt="bulb" width={200} />
 
-      <div className="card-container">
-        <StateString />
-      </div>
+      <br /><br />
+
+      <button onClick={turnOn}>Turn ON</button>
+      <button onClick={turnOff}>Turn OFF</button>
+    </div>
+    </div>
+    <div>
+      <ColorButton/>
+    </div>
+    <Fibanocci/>
+
+  
     </>
-  )
-}
+    
+    
+  );
+};
 
-export default App
+export default Bulb;

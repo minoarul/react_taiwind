@@ -4,7 +4,7 @@ const StateString = () => {
   const [count, setCount] = useState("this is state");
 
   const newNumber = () => {
-    setCount("this is changed");
+    setCount();
   };
 
   return (

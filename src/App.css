@@ -1,41 +1,66 @@
-/* PAGE BASE STYLE */
-body {
-  margin: 0;
-  padding: 0;
-  background: #eef1f5;
-  font-family: Arial, Helvetica, sans-serif;
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  flex-direction: column;
 }
 
-/* WHITE BOX CARD */
-.card-container {
-  margin: 20px auto;
-  padding: 25px;
-  width: 320px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
+/* Bulb Image */
+.app img {
+  transition: all 0.3s ease;
 }
 
-/* TEXT INSIDE STATE COMPONENT */
-.card-container p {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-/* BUTTON STYLE */
-.card-container button {
+/* Buttons */
+button {
   padding: 10px 20px;
+  margin: 10px;
   border: none;
-  border-radius: 10px;
-  background-color: #2563eb;
+  background-color: #4a4aef;
   color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.2s ease;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.card-container button:hover {
-  background-color: #1e3a8a;
+button:hover {
+  background-color: #3535b8;
 }
+
+/* ColorButton section wrapper */
+.color-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Light Shape Section */
+.button1 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Light Box (shape) */
+.button1 div {
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active Light Glow */
+.button1 .rounded-full {
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.7);
+}
+
+/* Text */
+.button1 p {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
