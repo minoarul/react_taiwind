@@ -1,38 +1,14 @@
 import React, { useState } from "react";
-import bulbOn from "./assets/download (1).jpg";
-import bulbOff from "./assets/download.jpg";
-import ColorButton from "./buttoncolor";
-import './App.css'
-import Fibanocci from "./fibonaccii";
+import Parent from "./components/parent";
 
-const Bulb = () => {
-  const [bulb, setBulb] = useState(bulbOff);
 
-  const turnOn = () => setBulb(bulbOn);
-  const turnOff = () => setBulb(bulbOff);
-
+function App() {
   return (
-    <>
-    <div className="app">
-      <div style={{ textAlign: "center" }}>
-      <img src={bulb} alt="bulb" width={200} />
-
-      <br /><br />
-
-      <button onClick={turnOn}>Turn ON</button>
-      <button onClick={turnOff}>Turn OFF</button>
-    </div>
-    </div>
     <div>
-      <ColorButton/>
+      <h1>React Props Example</h1>
+      <Parent/>
     </div>
-    <Fibanocci/>
-
-  
-    </>
-    
-    
   );
-};
+}
 
-export default Bulb;
+export default App;
